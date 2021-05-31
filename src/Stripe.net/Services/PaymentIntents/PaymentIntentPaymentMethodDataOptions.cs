@@ -56,6 +56,13 @@ namespace Stripe
         public PaymentIntentPaymentMethodDataBillingDetailsOptions BillingDetails { get; set; }
 
         /// <summary>
+        /// If this is a <c>card</c> PaymentMethod. For now just use when Secure Remote Commerce is needed.
+        /// </summary>
+        /// <see href="https://stripe.com/docs/secure-remote-commerce">SRC Stripe documentation.</see>
+        [JsonProperty("card")]
+        public PaymentIntentPaymentMethodDataCardOptions Card { get; set; }
+
+        /// <summary>
         /// If this is an <c>eps</c> PaymentMethod, this hash contains details about the EPS payment
         /// method.
         /// </summary>
